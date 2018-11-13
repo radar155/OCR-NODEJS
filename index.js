@@ -19,7 +19,7 @@ Ngocr.decodeStream = function(stream, callback) {
         + this.data[idx + 4] + ")";
       }
     }
-    callback(null, Ocrad(image));
+    callback(null, Ocrad(image, {numeric: true}));
   }).on('error', function(error){
     callback(error);
   });
